@@ -1,0 +1,20 @@
+.info {
+    min-height: 40vh; /* Gör att sectionen fyller hela höjden av skärmen */
+    background-color: #121e26;
+    display: flex;
+    justify-content: center;  /* Centrerar innehållet horisontellt */
+    align-items: center;      /* Centrerar innehållet vertikalt */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .info-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;       /* Centrerar texten horisontellt */
+    width: 80%;               /* Gör så att texten får en maximal bredd på 80% */
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  

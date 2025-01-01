@@ -1,0 +1,268 @@
+/* Den första navbaren (den fasta navbaren högst upp) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: #f2ece7;  */
+    background-color: rgba(18, 30, 38, 0.8);
+    backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px);
+      font-family: sans-serif;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-left: 150px;
+    padding-right: 150px;
+    transition: background-color 0.4s ease, transform 0.4s ease, top 0.3s ease-in-out;
+    
+  }
+
+  .navbar-logo {
+    
+    height: 70px;
+  }
+  
+  .navbar-logo .logo {
+    height: 40px;
+    transition: all 0.3s ease;
+    align-items: center;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .navbar-links li a {
+    color: #9d6556;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+    font-weight: 400;
+   
+  }
+  
+  .navbar-links li a:hover {
+    color: #d2c0b2;
+  }
+  /* .navbar-links li a.active {
+    color: #d2c0b2; 
+  } */
+  
+  /* Navbar.css */
+  .user-name {
+    display: flex;              /* Använd flexbox för vertikal placering */
+    flex-direction: column;     /* Se till att de ligger på varandra vertikalt */
+    align-items: flex-start;    /* Justera texten till vänster */
+    gap: 1px;     
+    font-weight: 200;
+    color: #9d6556;
+  }
+  .user-name .first-name {
+    font-size: 1.2rem;;
+    margin-bottom: 5px;         /* Lägger till lite avstånd under förnamnet */
+    border-bottom: 0.6px solid #384955; /* Tunn linje under förnamnet */
+    padding-bottom: 5px;  
+    width: 75px; 
+    text-align: center;     /* Lite padding så att linjen inte blir för tajt mot texten */
+  
+  }
+  
+  .user-name .last-name {
+    font-size: 1.2rem;
+  }
+  
+  
+  
+  
+    /* .navbar-button {
+      background-color: #000;
+      color: #fff;
+      border: solid #000;
+      padding: 5px 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-right: 40px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    } */
+  
+  .navbar-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-icons-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Avstånd mellan ikonerna */
+    margin-top: 10px;
+  }
+  
+  .social-icon-nav {
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s ease;
+  }
+  
+  .social-icon-nav:hover {
+    color: #d2c0b2; 
+    transform: scale(1.3);
+  }
+  
+  .social-icon i {
+    margin: 0;
+  }
+  
+  
+  /* .navbar-scrolled {
+    background-color:#121e26;
+    opacity: 0.9;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+  } */
+   
+  /* För att styla språkalternativen i navbaren */
+  .navbar-language {
+    display: flex;
+    justify-content: flex-start;  /* Centrerar alla språk-alternativ horisontellt */
+    align-items: center;      /* Centrerar alla språk-alternativ vertikalt */
+    gap: 10px;  
+    font-size: 120;
+    margin-left: 80px;              /* Mellanrum mellan språkalternativen */
+  }
+  
+  .language-option {
+    font-size: 0.6rem;          /* Justera storleken på texten */
+    cursor: pointer;
+    color: #8f8f8f;              /* Vit textfärg */
+    display: flex;
+    align-items: center;      /* Centrerar texten vertikalt i varje cell */
+    justify-content: center;  /* Centrerar texten horisontellt i varje cell */
+  }
+  
+  .language-option:hover {
+    color: #fff;}
+  
+  .language-divider {
+    width: 0.5px;               /* Tjocklek på linjen */
+    height: 15px;             /* Höjd på den vertikala linjen */
+    background-color: #808080;   /* Färgen på linjen */
+  }
+  
+  /* För små skärmar, som mobiler */
+  @media (max-width: 768px) {
+    .navbar {
+      padding:  10px; /* Minska padding för att ge mer utrymme */
+      flex-direction: column; /* Placera alla element vertikalt */
+      justify-content: center; /* Centrera elementen */
+      height: auto; /* Automatisk höjd baserat på innehållet */
+    }
+  
+    .navbar-logo .logo {
+      height: 30px; /* Minska storleken på loggan för att passa mindre skärmar */
+    }
+  
+    .navbar-links {
+      flex-direction: column; /* Placera länkarna vertikalt */
+      gap: 20px; /* Ge lite avstånd mellan varje länk */
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .navbar-links li a {
+      font-size: 1.1rem; /* Justera textstorleken för bättre läsbarhet på små skärmar */
+      padding: 10px 0; /* Ge lite padding på länkarna för bättre klickbarhet */
+    }
+  
+    .navbar-button {
+      display: none; /* Ta bort knappen på små skärmar om du inte använder en hamburger-meny */
+    }
+  
+    .navbar-language {
+      font-size: 0.9rem; /* Minska textstorleken för språkval */
+      margin-left: 0; /* Ta bort vänster marginal */
+    }
+  
+    .social-icons-navbar {
+      margin-top: 20px; /* Justera för avstånd på små skärmar */
+    }
+  }
+  
+  /* För ännu mindre skärmar, som smartphones i stående läge */
+  @media (max-width: 480px) {
+    .navbar {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .navbar-links li a {
+      font-size: 1rem; /* Justera textstorleken ännu mer för små skärmar */
+    }
+  }
+  
+  /* Gömd av default, visas på mobiler */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 9999; /* Säkerställ att knappen ligger över andra element */
+  }
+  
+  .navbar-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #9d6556;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* När navbaren är på mobila skärmar, visa hamburgermeny-knappen */
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: flex;
+    }
+    .navbar-links {
+      display: none; /* Göm navbar-länkarna som default på mobil */
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      background-color: rgba(18, 30, 38, 0.9);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Visa länkar när hamburgermeny är aktiverad */
+    }
+  }
+  
+  /* Lägg till en active class för att rotera barerna när knappen klickas */
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  
+  

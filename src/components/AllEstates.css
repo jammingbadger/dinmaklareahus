@@ -1,0 +1,32 @@
+/* src/App.css eller src/components/AllEstates.css */
+
+.all-estates {
+    padding: 20px;
+    background-color: aqua;
+  }
+  
+  .all-estates h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .all-estates ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .all-estates ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .all-estates ul li h2 {
+    margin: 0;
+  }
+  
+  .all-estates ul li p {
+    margin: 5px 0;
+  }
+  

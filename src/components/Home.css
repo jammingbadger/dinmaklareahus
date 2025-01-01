@@ -1,0 +1,272 @@
+.home {
+    position: relative; /* Gör så att overlay kan placeras ovanpå */
+    min-height: 100vh;
+    background-image: url(../assets/bild\ yngsjö\ 2.jpg);
+    background-size: cover;
+    background-position: center; /* Se till att bakgrundsbilden är centrerad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  /* Bakgrunds-overlay med opacity */
+  .home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(18, 30, 38, 0.9); /* Svart overlay med opacity */
+    z-index: 1; /* Gör så att overlay ligger bakom innehållet */
+  }
+  
+  /* Innehåll */
+  .home-content {
+    position: relative; /* Gör så att innehållet placeras ovanpå overlay */
+    z-index: 2; /* Sätt ett högre z-index för att innehållet ska vara ovanpå overlay */
+    text-align: center; /* Centrera texten */
+    color: white; /* Gör texten vit så att den syns bra mot mörk bakgrund */
+  }
+  
+  .home-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-family: sans-serif;
+  }
+  .buttons {
+    display: flex; /* Gör att knapparna placeras horisontellt */
+    flex-direction: row; /* Knappens layout ska vara horisontell */
+    gap: 50px; /* Avstånd mellan knapparna */
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+    font-family: sans-serif;
+  }
+     
+  .button-1 {
+    background-color: #f4efeb;
+    color: #121e26;
+    border: 3px solid #f4efeb;
+    border-radius: 5px;
+    padding: 8px 50px;
+    cursor: pointer;
+    width: 200px;  
+    height: 40px;                  
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+    display: flex;                 
+    justify-content: center;      
+    align-items: center;              
+    text-align: center;
+    transition: transform 0.3e ease;
+  }
+  .button-2 {
+    background-color: #637079;
+    color: #fff;
+    border: 3px solid #637079;
+    border-radius: 5px;
+    padding: 8px 50px;
+    cursor: pointer;
+    width: 200px;         
+    height: 40px;           
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+    display: flex;      
+    overflow: hidden;           
+    justify-content: center;      
+    align-items: center;              
+    text-align: center;
+    transition: transform 0.3e ease;
+  }
+  
+  
+  .button-1:hover, .button-2:hover {
+    transform: scale(1.06); 
+    transform-origin: center;
+  }
+  
+  .button-1 span, .button-2 span {
+    position: relative; /* Låser textens position */
+    transform: scale(1); /* Ingen skalning för texten */
+    transition: transform 0.3s ease; /* För att matcha knappen */
+  }
+  
+  /* Scroll-text och pil */
+  .scroll-down-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+  }
+  
+  .social-icons-home {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Avstånd mellan ikonerna */
+    margin-top: 10px;
+  }
+  
+  .social-icon-home {
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s ease;
+  }
+  
+  .social-icon-home:hover {
+    transform: scale(1.3);
+  }
+  
+  .social-icon i {
+    margin: 0;
+  }
+  
+  
+  
+  
+  /* Grundläggande styling */
+  /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  .home {
+    position: relative;
+    background-color: #f4f4f4;
+    height: 100vh;
+  }
+  
+  .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .home-text h1 {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button-1, .button-2 {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Så att menyn är över andra element */
+    display: flex;
+    align-items: center; /* För att justera kryssikonen och texten horisontellt */
+    justify-content: flex-end; /* Justera texten till vänster om ikonen */
+  }
+  
+  
+  
+  .hamburger-icon i {
+    font-size: 30px;  /* Justera storleken på ikonerna */
+    color: #9d6556;
+  }
+  
+  /* Sidomeny - döljs på större skärmar */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Döljer menyn till höger */
+    width: 250px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    z-index: 999; /* Så att menyn är över andra element */
+  }
+  
+  .side-menu.open {
+    right: 0; /* När menyn är öppen */
+  }
+  
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 100px;
+  }
+  
+  .side-menu ul li {
+    padding: 15px 20px;
+    /* border-bottom: 1px solid #444; */
+  }
+  
+  .side-menu ul li a {
+    color: #9d6556 ;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* När hamburgermenyn är öppen, rotera linjerna */
+  .hamburger-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger-icon.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Responsiv design för mobil och tablet (skärmar mindre än 768px) */
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block; /* Visa hamburgermenyn */
+    }
+  
+    .home-text h1 {
+      font-size: 1.5rem;
+      color:#fff;
+      text-align: center;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .button-1, .button-2 {
+      width: 300px;
+    }
+  
+    .side-menu {
+      right: -250px;  /* Döljer menyn på enheter med mindre skärm */
+      background-color: #121e26;
+    }
+    .burger-contact-text {
+      padding: 10px;
+      margin-top: 180px;
+      color: #637079;
+    }
+   
+  
+  }
+  
+  
