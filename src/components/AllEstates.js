@@ -1,27 +1,26 @@
-// src/components/AllEstates.js
 import React from 'react';
-import './AllEstates.css';  // Importera din CSS
+import { Link } from 'react-router-dom';  // För att länka till detaljsidor
+import './AllEstates.css'; // Om du vill lägga till CSS för denna komponent
 
-const AllEstates = () => {
-  const estates = [
-    { id: 1, name: 'Villa i Stockholm', price: '5,000,000 SEK' },
-    { id: 2, name: 'Lägenhet i Göteborg', price: '2,500,000 SEK' },
-    { id: 3, name: 'Hus på landet', price: '3,200,000 SEK' },
-    // Lägg till fler bostäder här
-  ];
-
+const AllEstates = ({ estates }) => {
   return (
-    <div className="all-estates">
-      <h1>Bostäder till salu</h1>
-      <ul>
-        {estates.map(estate => (
-          <li key={estate.id}>
-            <h2>{estate.name}</h2>
-            <p>{estate.price}</p>
-          </li>
+    <section className="all-estates">
+      <h1>Alla Bostäder</h1>
+      <div className="estates-list">
+        {estates.map((estate) => (
+          <div key={estate.id} className="estate-card">
+            <img src={estate.imageUrl} alt={estate.title} className="estate-image" />
+            <div className="estate-info">
+              <h2>{estate.title}</h2>
+              <p>{estate.description}</p>
+              <Link to={`/estate/${estate.id}`} className="view-details-link">
+                Visa detaljer
+              </Link>
+            </div>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,17 +1,19 @@
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Navbar from './components/Navbar';  // Importera Navbar
-import Home from './components/Home';      // Home sektion
-import Estates from './components/Estates'; // Estates sektion
+import Navbar from './components/Navbar';  
+import Home from './components/Home';      
+import Estates from './components/Estates'; 
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Info from './components/Info';
-import SellEstate from './components/SellEstate';
+import Info2  from './components/Info2';
 /* import AllEstates from './components/AllEstates'; */
-
-
+/* import SellEstate from './components/SellEstate'; */
+/* import AllEstates from './components/AllEstates';  */
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+/* import EstateDetails from './components/EstatesDetails'; */
+/* import estatesData from './data/estatesData'; */
 import './App.css';
+
 
 
 function App() {
@@ -21,9 +23,11 @@ function App() {
      <Navbar/>  
      <main>
       <Home/>
-      <Estates/>
+      {/* <Estates/> */}
+
       <Info/>
-      <SellEstate/>
+      <Info2/>
+      {/* <SellEstate/> */}
       <Contact/>
       <Footer/>
      </main>

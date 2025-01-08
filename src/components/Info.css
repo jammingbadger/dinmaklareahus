@@ -1,20 +1,45 @@
 .info {
-    min-height: 40vh; /* Gör att sectionen fyller hela höjden av skärmen */
-    background-color: #121e26;
-    display: flex;
-    justify-content: center;  /* Centrerar innehållet horisontellt */
-    align-items: center;      /* Centrerar innehållet vertikalt */
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  
-  .info-text {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #fff;
-    text-align: center;       /* Centrerar texten horisontellt */
-    width: 80%;               /* Gör så att texten får en maximal bredd på 80% */
-    font-weight: 100;
-    font-family: sans-serif;
-  }
-  
+  display: flex; /* Lägger innehållet i en rad */
+  align-items: center; /* Vertikal centrering */
+  justify-content: space-between; /* Utrymme mellan bild och text */
+  background-color: #f5f4f7;
+  padding: 100px;
+  padding-top: 200px;
+}
+
+.info-image {
+  flex: 1; /* Låt bilden ta en del av utrymmet */
+  max-width: 550px; /* Begränsar bildens bredd */
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.info-image img {
+  width: 100%; /* Gör bilden responsiv */
+  height: auto; /* Behåller bildens proportioner */
+}
+
+.info-text {
+  flex: 1; /* Låt texten ta en del av utrymmet */
+  max-width: 30%; /* Begränsar textens bredd */
+  font-family: Arial, sans-serif; /* Justera typsnittet efter behov */
+  margin-right: 100px;
+  text-align: left;
+}
+.info-text h1 {
+  font-size: 2rem;
+  color: #121e26;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.info-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; 
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+
+

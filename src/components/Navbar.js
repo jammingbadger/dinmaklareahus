@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import logo from "../assets/logga.png"
+import logo from "../assets/logga.png";
+/* import logo from "../assets/logga.png" */
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -35,10 +36,12 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-         <div className="user-name">
+
+        <img src={logo} alt="logga" className="navbar-logo"/>
+        {/*  <div className="user-name">
           <span className="first-name">Peter</span>
           <span className="last-name">Olvsborn</span>
-        </div> 
+        </div>  */}
        {/*  <img src={logo} alt="Logo" className="navbar-logo" /> */}
 
         <ul className="navbar-links">
@@ -70,6 +73,14 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <div className="social-icons-footer">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
       </nav>
     </>
   );

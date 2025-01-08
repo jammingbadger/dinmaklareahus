@@ -2,7 +2,8 @@
 .estates {
     min-height: 50vh;
     padding: 10px;
-    background-color: #121e26;
+    /* background-color: #121e26; */
+    background-color:#f5f4f7;
     font-family: sans-serif;
     position: relative;
   }
@@ -20,9 +21,9 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 60px;
-    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 100;
     color: #fff;
     font-family:sans-serif;
   }
@@ -38,12 +39,12 @@
     align-items: center;
     font-family:  sans-serif;
   }
-  
-  /* För hela estates-sektionen */
+ 
   .estates-content {
-    display: flex;
-    justify-content: space-between; /* För att jämnt fördela bilderna */
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    margin: 0 auto;
+    padding: 0;
   }
   
   
@@ -76,7 +77,7 @@
     padding: 10px;
     text-align: left;
     width: 100%;
-    font-family: 'Trebuchet MS';
+    font-family: sans-serif;
   }
   
   .estate-text-overlay h2 {
@@ -100,22 +101,22 @@
     overflow: hidden;
   }
   
-  .all-estates-button {
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 300;
-    border-bottom: 0.6px solid #9d6556;
-    display: inline-block; 
-    padding-bottom: 5px;
-    font-family: sans-serif;
-    transition: all 0.3s ease; 
+  .all-estates-text {
+    font-size: 1rem;
+    color: #9d6556;
+    font-weight: 100;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
   
-  .all-estates-button:hover {
-    color: #f4b27e;
-    /* color: #f4b27e;  */
-  
+  .all-estates-text:hover {
+    color: #d2c0b2;
+    text-decoration: none;
   }
+  
   
   
   

@@ -25,15 +25,13 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-        <div className='contact-text'>
-            <h1 className='contact-title'>Kontakta oss</h1>
-            <p>Vi ser fram emot att höra från dig!</p>
-            <div className='contact-adress'>
+        <div className='contact-text'>    
+        <div className='contact-adress'>
             <p>Åhusgatan 1</p>
             <p>123 45 Åhus</p>
             <p>info@dinmaklareahus.se </p>
             <p>044 - 24 23 24 </p>
-            </div>
+      </div>
           
         </div>
 

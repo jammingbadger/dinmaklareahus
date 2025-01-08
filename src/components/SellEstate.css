@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #384955;
+    /* background-color: #384955; */
+    background-color: rgba(245, 244, 247);
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -43,7 +44,7 @@
     max-width: 900px;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Frostad bakgrund för hela formuläret */
+    background: rgba(109, 109, 109, 0.1); /* Frostad bakgrund för hela formuläret */
     backdrop-filter: blur(10px); /* Frostig effekt */
     -webkit-backdrop-filter: blur(10px); /* För Safari */
     display: flex;
@@ -74,7 +75,7 @@
   .contact-form input::placeholder, 
   .contact-form select::placeholder, 
   .contact-form textarea::placeholder {
-    color: #bbb;  /* Ljusa grå för placeholder-texten */
+    color: #969595;  /* Ljusa grå för placeholder-texten */
     font-style: italic; /* Gör placeholder-texten kursiv */
 }
   
@@ -85,7 +86,7 @@
     margin-bottom: 5px;
     display: block;
     z-index: 1;
-    color: #fff;
+    color: #15193f;
   }
   
   .contact-form input, .contact-form select, .contact-form textarea {

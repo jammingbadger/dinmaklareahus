@@ -1,7 +1,7 @@
 .home {
     position: relative; /* Gör så att overlay kan placeras ovanpå */
     min-height: 100vh;
-    background-image: url(../assets/bild\ yngsjö\ 2.jpg);
+    background-image: url(../assets/freepik__candid-image-photography-natural-textures-highly-r__4705.jpeg);
     background-size: cover;
     background-position: center; /* Se till att bakgrundsbilden är centrerad */
     display: flex;
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(18, 30, 38, 0.9); /* Svart overlay med opacity */
+    /* background-color: rgba(18, 30, 38, 0.9); */ 
     z-index: 1; /* Gör så att overlay ligger bakom innehållet */
   }
   
@@ -30,9 +30,9 @@
   }
   
   .home-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    font-weight: 300;
+    font-weight: 100;
     font-family: sans-serif;
   }
   .buttons {
@@ -46,9 +46,9 @@
   }
      
   .button-1 {
-    background-color: #f4efeb;
+    background-color: rgb(242, 236, 231);
     color: #121e26;
-    border: 3px solid #f4efeb;
+   border: none;
     border-radius: 5px;
     padding: 8px 50px;
     cursor: pointer;
@@ -66,7 +66,7 @@
   .button-2 {
     background-color: #637079;
     color: #fff;
-    border: 3px solid #637079;
+    border: none;
     border-radius: 5px;
     padding: 8px 50px;
     cursor: pointer;

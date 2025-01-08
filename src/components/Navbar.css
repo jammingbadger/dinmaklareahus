@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    /* background-color: #f2ece7;  */
-    background-color: rgba(18, 30, 38, 0.8);
+    background-color: rgba(222, 222, 223, 0.6); 
+    /* background-color: rgba(18, 30, 38, 0.8); */
     backdrop-filter: blur(10px); 
       -webkit-backdrop-filter: blur(10px);
       font-family: sans-serif;
@@ -22,14 +22,14 @@
   }
 
   .navbar-logo {
-    
-    height: 70px;
+    width: auto;
+    height: 60px;
   }
   
   .navbar-logo .logo {
     height: 40px;
     transition: all 0.3s ease;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .navbar-links {
@@ -41,16 +41,17 @@
   }
   
   .navbar-links li a {
-    color: #9d6556;
+    /* color: #9d6556; */
+    color: #121e26;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.5s ease;
-    font-weight: 400;
+    font-weight: 300;
    
   }
   
   .navbar-links li a:hover {
-    color: #d2c0b2;
+    color: #777879;
   }
   /* .navbar-links li a.active {
     color: #d2c0b2; 
@@ -63,12 +64,12 @@
     align-items: flex-start;    /* Justera texten till vänster */
     gap: 1px;     
     font-weight: 200;
-    color: #9d6556;
+    color: #121e26;
   }
   .user-name .first-name {
     font-size: 1.2rem;;
     margin-bottom: 5px;         /* Lägger till lite avstånd under förnamnet */
-    border-bottom: 0.6px solid #384955; /* Tunn linje under förnamnet */
+    border-bottom: 0.6px solid #637079; /* Tunn linje under förnamnet */
     padding-bottom: 5px;  
     width: 75px; 
     text-align: center;     /* Lite padding så att linjen inte blir för tajt mot texten */
