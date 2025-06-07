@@ -1,0 +1,180 @@
+.card-section {
+    display: flex;
+    justify-content: center; /* Centrerar korten horisontellt */
+    align-items: center; /* Centrerar korten vertikalt */
+    height: 80vh; /* Fyller hela höjden på sidan */
+    background-color: #fff; /* Bakgrundsfärg för sektionen */
+    margin: 0 auto;
+  }
+  
+  .card-container {
+    display: flex; /* Flexbox för att skapa en horisontell rad */
+    gap: 20px; /* Avstånd mellan korten */
+    justify-content: center; /* Centrerar korten horisontellt */
+    align-items: center; /* Centrerar korten vertikalt */
+    width: 70%;
+    max-width: 1200px; /* Maxbredd för att undvika att korten sprider sig för mycket */
+  }
+  
+  .card {
+    opacity: 0;
+    transform: translateX(-100%); /* Startar från vänster */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .card.fade-in {
+    opacity: 1;
+    transform: translateX(0); /* Slutar på sitt ursprungliga läge */
+  }
+  
+  /* För att glida in från andra riktningar */
+  .card:nth-child(2) {
+    transform: translateY(100%); /* Glider in uppifrån */
+  }
+  .card:nth-child(3) {
+    transform: translateX(100%); /* Glider in från höger */
+  }
+  
+
+  
+  .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out; /* Lägger till en övergångseffekt för bildens opacitet */
+  }
+
+  .card-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Mörk overlay med opacitet */
+    z-index: 1; /* Overlayen ska vara under texten */
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.9s ease; /* Lägg till en smidig övergång */
+    width: 90%; /* Gör att innehållet inte sträcker sig hela vägen till kanten */
+  }
+  
+  .card-title {
+    position: absolute;
+    bottom: 50%; /* Lägg rubriken en bit från botten */
+    left: 20px;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: 500;
+    z-index: 1; /* Säkerställer att rubriken alltid är synlig ovanpå texten */
+    transition: transform 0.8s ease, opacity 0.3s ease; /* Lägg till en övergångseffekt för när rubriken flyttas */
+  }
+  
+  .card-description {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 0;
+    font-family: sans-serif;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 2s ease; /* För texten */
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(60px); /* Texten börjar lite längre ner */
+    transition: opacity 0.3s ease, transform 2s ease; /* För texten */
+  }
+  
+  .card:hover .card-image {
+    opacity: 0.6; /* Gör bilden genomskinlig vid hovring */
+  }
+  
+  .card:hover .card-title {
+    transform: translateY(-100px); /* Flyttar upp rubriken vid hovring */
+  }
+  
+  .card:hover .card-content {
+    opacity: 1; /* Gör innehållet synligt vid hovring */
+    transform: translateY(0); /* Gör texten synlig vid hovring */
+  }
+  
+  .card:hover .card-description {
+    opacity: 1; /* Gör textbeskrivningen synlig vid hovring */
+    transform: translateY(0); /* Flyttar upp texten */
+  }
+  
+ 
+/* Stöd för mobilvy, 768px och mindre */
+@media (max-width: 768px) {
+  .card-container {
+    display: flex; /* Använd flexbox för att arrangera korten horisontellt */
+    overflow-x: auto; /* Möjliggör horisontell scroll */
+    scroll-snap-type: x mandatory; /* Tvinga korten att snäppa vid varje skrollning */
+    gap: 20px; /* Avstånd mellan korten */
+    padding: 10px;
+    width: 100%; /* Full bredd */
+  }
+
+  .card {
+    min-width: 100%; /* Varje kort tar upp hela containerbredden */
+    flex-shrink: 0; /* Hindrar korten från att krympa */
+    scroll-snap-align: start; /* Kortet snäpper till start vid scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px; /* Anpassa höjd för mobilvy */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  /* Anpassa för ännu mindre skärmar */
+  @media (max-width: 480px) {
+    .card-container {
+      gap: 10px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+    }
+    .card-description {
+      font-size: 0.85rem;
+    }
+  }
+}
+

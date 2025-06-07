@@ -1,0 +1,130 @@
+.info3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 50px;
+    height: 80vh;
+    position: relative;
+    padding: 0 60px; /* Jämnt avstånd på båda sidor */
+  }
+  
+  @media (min-width: 768px) {
+    .info3-container {
+      flex-direction: row;
+      justify-content: space-between; /* Flyttar ut elementen till kanterna */
+    }
+  }
+  
+  .info3-image {
+    position: absolute;
+    left: 0;
+    width: 50%; /* Bevarar storleken men flyttar den till vänsterkant */
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .info3-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  
+  .info3-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: hwb(38 94% 3%);
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    }
+  
+  .info3-text-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+  
+  .info3-text-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .info3-text-content h3 {
+    margin-bottom: 20px;
+    font-weight: 100;
+  }
+
+  .info3-button {
+    background-color: #2f4858;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: 1px solid #2f4858;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 16px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .info3-button:hover {
+    background-color: #1e2f3a;
+    border: 1px solid #1e2f3a;
+    color: white;
+  }
+  
+  @media (max-width: 1024px) {
+    .info3-text {
+      width: 40%;
+      left: 20px;
+      padding: 15px;
+    }
+    .info3-image {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .info3-container {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+    .info3-text {
+      position: static;
+      width: 90%;
+      text-align: center;
+      margin-top: 20px;
+      transform: none;
+      left: auto;
+      box-shadow: none;
+    }
+    .info3-text-content {
+      text-align: center;
+    }
+    .info3-image {
+      position: static;
+      width: 100%;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info3-text {
+      width: 100%;
+      padding: 10px;
+    }
+    .info3-button {
+      width: 100%;
+      padding: 10px;
+    }
+  }

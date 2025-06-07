@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Använder Montserrat för brödtext */
+  font-size: 16px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: white;
+  padding-top: env(safe-area-inset-top);
+  
+
+}
+
+p {
+  font-family: 'Montserrat', sans-serif; /* Använder Montserrat för styckestext */
+  font-size: 16px; /* Justerar storleken */
+  color: #444; /* Mörkgrå färg för bättre läsbarhet */
+  line-height: 1.6; /* Ökar radavståndet för bättre läsbarhet */
+  margin-bottom: 16px; /* Lägger till lite avstånd mellan stycken */
+}
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Använder Playfair Display för rubriker */
+  font-weight: 600;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

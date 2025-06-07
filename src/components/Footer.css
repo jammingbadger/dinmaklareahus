@@ -1,0 +1,144 @@
+/* Grundläggande styling */
+.footer {
+  background-color: #2f4858; /* Mörk bakgrund */
+  color: white;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+/* .footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+} 
+
+/* Vänster och mitten sektioner */
+.footer .left, 
+.footer .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Kontaktuppgifter */
+.footer .left h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer .footer-faIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.footer .footer-faIcon a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-faIcon a:hover {
+  color: #748c88; 
+}
+
+.mail-link {
+  margin-top: 5px;
+}
+
+.logo3 {
+  height: 50px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+/* Sociala medier */
+.middle h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-footer {
+  color: white;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.socialIcon:hover {
+  color: #576167;
+}
+
+.footer-faIcon {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Footer botten */
+.footerBottom p {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 8px;
+  color: #c0c2c1;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+
+  .footer {
+    margin: 0;
+  }
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .left {
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .footer .middle {
+    align-items: center;
+  }
+
+  .footer .footer-faIcon {
+    justify-content: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footerBottom p {
+    font-size: 8px;
+  }
+ 
+  .logo3 {
+    display: block;
+    margin: 0 auto 60px;
+    height: 45px;
+    width: auto;
+    margin-bottom: 30px;
+  }
+}

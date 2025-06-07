@@ -1,0 +1,150 @@
+/* Reset */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  } */
+  
+  .hero {
+    height: 100vh;
+    background-image: url(../assets/2412061.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+    animation: fadeIn 3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .hero p {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 500;
+  }
+
+
+  
+  .btn {
+    background-color: rgba(47, 72, 88, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* För när man hovrar på knappen */
+  .btn:hover {
+    background-color: #1e2f3a; /* Bakgrundsfärg vid hover */
+    border: none;
+    color: white; /* Textfärg vid hover */
+  }
+  
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 100vh; /* Minska höjden på hero-sektionen på mindre skärmar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem; /* Minska rubrikstorleken */
+    }
+  
+    .hero-content {
+      max-width: 100%; /* Gör innehållet mer responsivt genom att ge det större utrymme */
+      text-align: center;
+    }
+  
+    
+  }
+  
+  /* För skärmar som är max 480px (smartphones) */
+  @media (max-width: 480px) {
+    .hero {
+      position: relative; /* Viktigt för att pseudo-elementet ska fungera */
+      height: 100vh; /* Fyll hela skärmen */
+      min-height: 100vh; /* Säkerställ att den inte blir större */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(../assets/2412037.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden; /* Förhindra att sektionen sträcker sig längre än den ska */
+      margin: 0;
+    }
+  
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /* Täcker hela bredden */
+      height: 100%; /* Täcker hela höjden */
+      background: rgba(0, 0, 0, 0.2); /* Mörk overlay */
+      z-index: 0; 
+    }
+  
+    .hero h1 {
+      font-size: 2rem; /* Gör rubriken ännu mindre */
+    }
+  
+    .hero-content {
+      max-width: 80%; /* Fyll hela skärmen */
+      text-align: center;
+      }
+  
+    .btn {
+      width: 80%; /* Knapparna får hela bredden på små skärmar */
+      height: 50px; /* Höjdjustering för knappar på små skärmar */
+      margin-top: 100px;
+      background-color: rgba(47, 72, 88, 0.9);
+      border: none;
+      font-weight: 500;
+     
+    }
+  }
