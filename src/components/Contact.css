@@ -1,0 +1,27 @@
+.contact {
+    padding: 30px;
+    background-color: #121e26;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+   
+  }
+
+  .contact-title {
+    color: #384955;
+    font-size: 2rem;
+  
+  }
+
+  
+  .contact-adress {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fff;
+    
+  }
+
+  p {
+    color: #fff;
+  }
+
+
