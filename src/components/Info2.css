@@ -11,13 +11,6 @@
   padding: 0 60px; /* Minskad padding för att flytta in kanterna mer */
 }
 
-@media (min-width: 768px) {
-  .info2-container {
-    flex-direction: row;
-    justify-content: space-between; /* Flyttar ut elementen till kanterna */
-  }
-}
-
 .info2-image {
   position: absolute;
   right: 0; /* Flytta bilden till höger istället för vänster */
