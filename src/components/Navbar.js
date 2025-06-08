@@ -63,17 +63,17 @@ useEffect(() => {
 
       <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
       <li className="fade-in">
-  <Link to="/#fastigheter" smooth={true} duration={500} offset={-window.innerHeight / 3} onClick={() => setMenuOpen(false)}>
+  <Link to="fastigheter" smooth={true} duration={500} offset={-window.innerHeight / 3} onClick={() => setMenuOpen(false)}>
     Till salu
   </Link>
 </li>
 <li className="fade-in">
-  <Link to="/#sell" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
+  <Link to="kontakt" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
     Sälj din bostad
   </Link>
 </li>
 <li className="fade-in">
-  <Link to="/#footer" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
+  <Link to="footer" smooth={true} duration={500} onClick={() => setMenuOpen(false)}>
     Kontakta oss
   </Link>
 </li>
@@ -85,16 +85,18 @@ useEffect(() => {
   <p className="contact-info">
   <div className="fade-in contact-info">
   <p className="address">Köpmannagatan 15<br/>296 31 Åhus</p>
+  <div className="contact-details">
   <a 
     href="tel:+4641123456"
-    className="phone-number">
-    +46 (0) 411 234 56
+    className="contact-line">
+    Tel: +46 (0) 411 234 56
   </a>
   <a 
-    href="mailto:pe@example.com" 
-    className="mail-link">
-    pe@example.com
+    href="mailto:peter@dinmaklareahus.se" 
+    className="contact-line">
+    peter@dinmaklareahus.se
   </a>
+  </div>
 </div>
 
   </p>

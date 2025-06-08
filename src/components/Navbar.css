@@ -6,7 +6,7 @@
   padding: 0 100px;
   background-color: rgba(0, 0, 0, 0.05); 
     backdrop-filter: blur(5px); 
-     -webkit-backdrop-filter: blur(20px); 
+     -webkit-backdrop-filter: blur(5px); 
   height: 100px;
   position: fixed;
   top: 0;
@@ -50,7 +50,7 @@
   height: 2px;
 /*   background-color: #1e2f3a;
  */  
- background-color: rgb(191, 189, 189);
+ background-color: white;
  margin: 5px 0;
   transition: all 0.3s ease-in-out;
 }
@@ -91,22 +91,22 @@
   
 }
 
-.mail-link {
-  text-decoration: none;
-  color: white;
+.contact-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* viktigt för vänsterjustering */
   margin-top: 15px;
+  gap: 5px; /* liten mellanrum mellan telefon & mail */
 }
 
-
-
-.phone-number {
-  display: flex;
-  flex-direction: column;
+.contact-line {
   font-weight: 200;
-  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
 }
+
 
 
 .navbar-line {
