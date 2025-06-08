@@ -8,7 +8,7 @@ const ContactPage = () => {
       <div className="contact-container">
         <div className="contact-form">
 {/*           <img src={logo2} alt="Logotyp2" className="logo2" /> 
- */}          <h3>Hur kan vi hjälpa dig?</h3>
+ */}          <h3>Köp eller sälj med oss</h3>
           <p>Vi finns här för att guida dig genom hela processen – 
             från första steget till ett lyckat resultat. Oavsett om 
             du letar efter ditt drömboende eller vill sälja din bostad, 
