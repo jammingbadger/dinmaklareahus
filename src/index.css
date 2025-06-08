@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif; /* Använder Montserrat för brödtext */
+  font-family: 'Merriweather', sans-serif; /* Använder Montserrat för brödtext */
   font-size: 16px;
   color: #333;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +14,7 @@ body {
 }
 
 p {
-  font-family: 'Montserrat', sans-serif; /* Använder Montserrat för styckestext */
+  font-family: 'Lato', sans-serif; /* Använder Montserrat för styckestext */
   font-size: 16px; /* Justerar storleken */
   color: #444; /* Mörkgrå färg för bättre läsbarhet */
   line-height: 1.6; /* Ökar radavståndet för bättre läsbarhet */
@@ -23,7 +23,7 @@ p {
 
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif; /* Använder Playfair Display för rubriker */
+  font-family: 'Lato', serif; /* Använder Playfair Display för rubriker */
   font-weight: 600;
 }
 
